@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="flex w-full" x-data="{i:
+        {%- if let Some(thanks) = thanks -%}
+            {{ thanks.dog_index }}
+        {%- else -%}
+            0
+        {%- endif -%}
+    }">
+        <!-- tailwind: hidden flex sm:hidden sm:flex md:hidden md:flex lg:hidden lg:flex -->
+        {% let sizes = [("", 1usize), ("sm:", 2), ("md:", 3), ("lg:", 4)] %}
+        {% for j in 0usize..4 %}
+            <div class="{%if j > 0%}hidden{%endif%} {{*sizes[j].0}}flex {% if j < 3 %}{{*sizes[j+1].0}}hidden{% endif %} flex-1">
+                {% let num_dogs = *sizes[j].1 %}
+                {% let last_index = (dogs.len() as isize - *num_dogs as isize).max(0) %}
+                <button class="text-5xl p-2 disabled:opacity-25" @click="i = Math.max(Math.min(i, {{ last_index }})-1, 0)" :disabled="i == 0">&langle;</button>
+                <div class="flex gap-2 flex-1">
+                    {% for dog in dogs %}
+                        {% let index = loop.index0 %}
+                        <div class="flex flex-1 duration-300 w-0 overflow-hidden" x-show="false
+                                {%- for k in 0..*num_dogs -%}
+                                    || {{ index }} == Math.min(i, {{ last_index }}) + {{k}}
+                                {%- endfor -%}
+                            "
+                            x-transition:enter="dog-transition"
+                            x-transition:enter-start="flex-grow-0"
+                            x-transition:enter-end="flex-grow"
+                            x-transition:leave="dog-transition"
+                            x-transition:leave-start="flex-grow"
+                            x-transition:leave-end="flex-grow-0"
+                        >
+                            <a class="dog-card-link block bg-slate-600 rounded-xl overflow-hidden flex-1"
+                                href="#dogviewer" hx-get="/dogviewer?shelter={{shelter}}&dog={{dog.id}}" hx-target="#dogviewer" hx-indicator="#dogindicator" hx-sync=".dog-card-link:replace">
+                                <div class="bg-cover bg-center w-full h-96" style="background-image: url('/static/dogs/{{dog.image}}')"></div>
+                                <div class="flex p-4">
+                                    <div class="flex-1">
+                                        <h3 class="text-2xl mb-2">{{dog.name}}</h3>
+                                        <p class="text-slate-400">{{dog.breed}}</p>
+                                    </div>
+                                    <div class="flex-1 text-right text-slate-400">
+                                        <!-- {if typeof birth_date === "string"}
+                                            {(((new Date()).getTime() - (new Date(birth_date)).getTime()) / 1000 / 3600 / 24 / 365.25).toFixed(0)}
+                                        {else}
+                                            ????
+                                        {/}
+                                        years old -->
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+                <button class="text-5xl p-2 disabled:opacity-25" @click="i = Math.min(i+1, {{ last_index }})" :disabled="i >= {{ last_index }}">&rangle;</button>
+            </div>
+        {% endfor %}
+    </div>
+    <div id="dogviewer" x-data="{ show_payment: false }"
+        {%- if let Some(thanks) = thanks -%}
+            hx-trigger="load"
+            hx-get="/dogviewer?shelter={{ shelter }}&dog={{ thanks.dog_id }}&appreciative"
+            hx-indicator="#dogindicator"
+            hx-sync=".dog-card-link:replace"
+        {%- endif -%}
+    >
+        <div id="dogindicator" class="hidden gap-4 max-w-6xl mx-auto p-2 my-16 animate-pulse flex-col sm:flex-row items-center sm:items-start">
+            <div class="bg-slate-700 rounded-xl aspect-square w-48 md:w-64 lg:w-96"></div>
+            <div class="w-full max-w-80 flex-1 flex flex-col gap-2">
+                <div class="bg-slate-700 rounded-xl w-48 h-6"></div>
+                <div class="bg-slate-700 rounded-xl w-24 h-6"></div>
+                <div class="bg-slate-700 rounded-xl w-3/4 h-6"></div>
+                <div class="bg-slate-700 rounded-xl w-full h-8"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

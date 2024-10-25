@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="overflow-x-scroll">
+            <div class="map relative" style="aspect-ratio: 3179/2245;" x-ref="map" x-data="{}" @pageshow.window="$refs.map.classList.remove('scale-150')">
+                <div style="background-image: url('/static/map/map.svg')"></div>
+                <div class="overlay" @click="window.location.href = '/dogs?shelter=0'; $refs.map.classList.add('scale-150');">
+                    {% include "../static/map/za_kzn.svg" %}
+                </div>
+                <div class="overlay" @click="window.location.href = '/dogs?shelter=1'; $refs.map.classList.add('scale-150');">
+                    {% include "../static/map/za_wc.svg" %}
+                </div>
+                <div class="overlay" @click="window.location.href = '/dogs?shelter=0'; $refs.map.classList.add('scale-150');">
+                    {% include "../static/map/za_ec.svg" %}
+                </div>
+                <div class="overlay" @click="window.location.href = '/dogs?shelter=1'; $refs.map.classList.add('scale-150');">
+                    {% include "../static/map/za_fs.svg" %}
+                </div>
+                <div class="overlay" @click="window.location.href = '/dogs?shelter=0'; $refs.map.classList.add('scale-150');">
+                    {% include "../static/map/za_gp.svg" %}
+                </div>
+                <div class="overlay" @click="window.location.href = '/dogs?shelter=1'; $refs.map.classList.add('scale-150');">
+                    {% include "../static/map/za_mp.svg" %}
+                </div>
+                <div class="overlay" @click="window.location.href = '/dogs?shelter=0'; $refs.map.classList.add('scale-150');">
+                    {% include "../static/map/za_lm.svg" %}
+                </div>
+                <div class="overlay" @click="window.location.href = '/dogs?shelter=1'; $refs.map.classList.add('scale-150');">
+                    {% include "../static/map/za_nc.svg" %}
+                </div>
+                <div class="overlay" @click="window.location.href = '/dogs?shelter=0'; $refs.map.classList.add('scale-150');">
+                    {% include "../static/map/za_nw.svg" %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,67 @@
+<div id="dogindicator" class="hidden gap-4 max-w-6xl mx-auto p-2 my-16 animate-pulse flex-col sm:flex-row items-center sm:items-start">
+    <div class="bg-slate-700 rounded-xl aspect-square w-48 md:w-64 lg:w-96"></div>
+    <div class="w-full max-w-80 flex-1 flex flex-col gap-2">
+        <div class="bg-slate-700 rounded-xl w-48 h-6"></div>
+        <div class="bg-slate-700 rounded-xl w-24 h-6"></div>
+        <div class="bg-slate-700 rounded-xl w-3/4 h-6"></div>
+        <div class="bg-slate-700 rounded-xl w-full h-8"></div>
+    </div>
+</div>
+<div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 max-w-6xl mx-auto p-2 my-16">
+    <div class="bg-cover bg-center aspect-square w-48 md:w-64 lg:w-96 rounded-lg" style="background-image: url('/static/dogs/{{dog.image}}')"></div>
+    <div class="flex-1">
+        <!-- <p class="float-right text-xl text-slate-200">{(((new Date()).getTime() - (new Date(open.birth_date)).getTime()) / 1000 / 3600 / 24 / 365.25).toFixed(0)} years old</p> -->
+        <h3 class="text-2xl mb-2">
+            {{dog.name}}
+            {% if appreciative %}
+                <small class="animate-pulse text-slate-200 relative -top-0.5">appreciates your donation!</small>
+            {% endif %}
+        </h3>
+        <p class="text-slate-200 mb-1">{{dog.breed}}</p>
+        <p class="mb-2">{{dog.bio}}</p>
+        <div class="flex gap-2 sm:items-start md:items-center flex-col md:flex-row">
+            <div class="flex flex-1 items-center gap-2">
+            <progress class="{% if appreciative %}animate-pulse{% endif %} flex-1 my-0 rounded" value="{{dog.account}}" max="100">{{dog.account}}%</progress>
+                ${{dog.account}} / $100
+            </div>
+            <button class="bg-slate-600 rounded-md hover:bg-slate-700 px-2 py-1 border" @click="show_payment = true">Donate to Support {{dog.name}}</button>
+        </div>
+
+    </div>
+</div>
+<template x-if="show_payment">
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <!-- svelte-ignore a11y-no-static-element-interactions -->
+    <div class="fixed top-0 right-0 bottom-0 left-0 bg-black bg-opacity-50 flex items-center justify-center" @click="show_payment = false">
+        <!-- svelte-ignore a11y-no-static-element-interactions -->
+        <div class="bg-slate-800 border border-slate-700 w-full max-w-md mx-2 rounded-lg px-3 py-2" @click.stop>
+            <div class="flex">
+                <h2 class="text-slate-400 text-lg flex-1">
+                    Donate to {{dog.name}}!
+                </h2>
+                <button class="text-2xl relative -top-1" click="show_payment = false">&times</button>
+            </div>
+            <hr class="my-1 border-slate-600">
+            <form method="post" action="/donate">
+                <input type="hidden" name="shelter" value="{{ shelter }}">
+                <input type="hidden" name="dog" value="{{ dog.id }}">
+                <div>
+                    <label class="mb-2" for="wallet">Wallet ID</label><br>
+                    <input class="mb-2 bg-slate-900 border border-slate-600 rounded p-2 w-full" type="text" name="wallet" id="wallet"><br>
+                </div>
+                <div class="flex items-center gap-2 mb-2" x-data="{amount: 1}">
+                    <input class="flex-1" type="range" name="amount" id="amount" x-model="amount" min="1" max="100"><br>
+                    <label for="amount" x-text="'$'+amount"></label>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="flex gap-2">
+                        <label for="recurring">Support {{dog.name}} Monthly</label>
+                        <input type="checkbox" name="recurring" id="recurring">
+                    </div>
+                    <div class="flex-1"></div>
+                    <input class="bg-slate-600 rounded-md hover:bg-slate-700 px-2 py-1 border enabled:border-slate-400 border-slate-600" type="submit" value="Donate">
+                </div>
+            </form>
+        </div>
+    </div>
+</template>

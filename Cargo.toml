@@ -1,0 +1,18 @@
+[package]
+name = "petpatron"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = "0.7.7"
+clap = { version = "4.5.20", features = ["derive", "env"] }
+dotenv = { version = "0.15.0", features = ["clap"] }
+env_logger = "0.11.5"
+log = "0.4.22"
+rinja = { version = "0.3.5", features = ["with-axum", "serde_json"] }
+rinja_axum = "0.3.5"
+serde = { version = "1.0.213", features = ["derive"] }
+serde_json = "1.0.132"
+tokio = { version = "1.41.0", features = ["full"] }
+tower = "0.5.1"
+tower-http = { version = "0.6.1", features = ["fs"] }

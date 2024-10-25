@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply bg-slate-800 text-white;
+}
+
+.container {
+    @apply max-w-7xl px-4 mx-auto;
+}
+
+.dog-transition a {
+    @apply min-w-56;
+}
+
+#dogindicator.htmx-request {
+    @apply !flex;
+}
+
+#dogindicator.htmx-request + div {
+    @apply hidden;
+}
+
+.map {
+    @apply duration-500;
+}
+
+.map div {
+    @apply absolute top-0 right-0 bottom-0 left-0 bg-cover bg-center;
+}
+
+.map .overlay {
+    @apply block pointer-events-none cursor-pointer;
+}
+
+.map .overlay svg {
+    @apply w-full h-full;
+}
+
+.map .overlay path {
+    @apply opacity-50 hover:opacity-100 pointer-events-auto;
+}

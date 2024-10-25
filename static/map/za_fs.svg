@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewbox="0 0 3178.5828 2245.0393"
+   id="doc"
+   sodipodi:docname="za_fs.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview3724"
+     pagecolor="#282828"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.30378088"
+     inkscape:cx="2506.741"
+     inkscape:cy="1947.1272"
+     inkscape:window-width="1920"
+     inkscape:window-height="1019"
+     inkscape:window-x="0"
+     inkscape:window-y="31"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="map" />
+  <metadata
+     id="metadata7429">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs">
+    <clipPath
+       id="mapclip">
+      <rect
+         width="3178.5828"
+         height="2245"
+         x="0"
+         y="0"
+         id="cliprect" />
+    </clipPath>
+    <clipPath
+       id="mapclip-5">
+      <rect
+         width="472"
+         height="480"
+         x="0"
+         y="0"
+         id="cliprect-9" />
+    </clipPath>
+    <clipPath
+       id="mapclip-0">
+      <rect
+         width="648"
+         height="659"
+         x="0"
+         y="0"
+         id="cliprect-6" />
+    </clipPath>
+    <clipPath
+       id="mapclip-6">
+      <rect
+         width="750"
+         height="763"
+         x="0"
+         y="0"
+         id="cliprect-3" />
+    </clipPath>
+  </defs>
+  <g
+     id="map"
+     clip-path="url(#mapclip)">
+    <g
+       id="prov_border"
+       style="fill:none;stroke:#aaaaaa;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1">
+      <path
+         style="stroke:none;stroke-opacity:1;fill:#ffffff;fill-opacity:0.25"
+         d="m 2022.97,821.98 13.23,-0.1 6.49,6.16 3.58,-7.8 15.15,-0.76 1.47,-5.21 11.83,-7.18 4.59,5.95 1.73,14.86 14.91,9.41 0.46,7.6 9.81,0.26 6.11,5.98 2.95,-6.5 11.9,11.19 10.16,-2.7 2.83,12.83 10.16,-9.03 3.39,9.57 8.25,5.81 14.7,-6.95 -7.58,-0.86 6.51,-6.6 9.01,2.87 15.21,12.35 4.99,0.17 5.5,3.17 2.23,-7.2 11.11,-3.34 7.06,3.36 5.74,4.42 8.67,23.56 16.2,-4.15 1.37,6.45 14.38,4.34 1.56,7.36 11.31,1.45 6.54,5.97 2.33,12.02 8.04,5.04 11.49,20.58 12.4,-1.54 v -7.4 l 8.95,-0.96 -8.51,4.64 1.07,7.9 6.83,1.73 2.77,10.3 -16.92,13.34 5.62,5.02 -1.27,11.49 3.88,7.15 -5.22,2.57 -1.47,12 -5.63,4.44 3.2,6.26 -3.93,1.06 -5.58,13.35 6.29,16.34 -7.12,16.51 -16.49,3.48 -11.1,9.01 -3.8,9.13 -5.73,-0.86 -13.09,10.66 -6.06,-2.41 -8.91,11.34 3.52,4.4 -12.32,7.57 -5.62,-3.78 -18.3,4.37 -5.06,12.75 -7.13,7.18 -3.76,12.74 -9.75,-0.29 -1.52,-12.08 -10.13,-2.36 -2.95,-11.77 -10.53,-6.43 -2.94,2.43 -29.64,4.21 -9.3,12.06 -27.32,0.11 -10.17,10.2 -10.59,17.89 -13.78,-4.77 -10.71,11.83 -16.95,-4.08 0.77,7.36 -11.7,10.76 -5.14,17.38 -5.53,9.04 -14.85,9.88 4.74,3.81 -13.93,8.52 -5.69,18.91 -24.32,22.63 -18.97,4.24 -10.19,10.05 -5.66,-3.37 -1.07,7.76 11.93,11.73 16.79,43.09 11.5,12.59 4.14,15.64 11.98,1.48 -5.45,5.77 0.24,23.15 3.52,11.2 -11.65,3.96 6.41,3.57 -10.92,2.94 4.99,4.34 -20.51,6.71 -8.11,-2.6 -18.83,4.58 4.28,10.48 -12.59,1.11 0.18,8 -14.96,4.65 -4.77,-7.04 -19.97,4.01 -14.83,-0.42 -13.58,-6.79 1.37,-5.33 -9.4,-5.31 -11.16,4.89 -9.91,-2.91 -2.98,-6.4 -9.56,-2.25 -4.48,-7.56 -4.77,3.57 -22.91,5.63 -5.66,7.62 -4.59,-7.12 -1.55,9.36 -16.13,8.01 -2.64,7.12 -9.31,-1.58 -4.12,-6.55 -5.93,3.09 -5.76,-11.63 -5.05,4.35 -12.98,1.23 -13.14,-10.92 -10.12,2.88 -10.16,-12.85 -6.92,-0.49 -13.95,-21.48 -7.74,-1.32 -0.82,-12.98 -7.1,0.52 -5.28,-11.01 -7.1,-2.8 -4.97,-13.06 -10.14,-16.35 -0.67,-5.95 -17.97,-4.61 -0.54,-10.98 -8.77,0.83 -9.42,-11.46 -10.85,-5.29 -8.59,-3.51 -9.3,-14.96 -0.35,-7.79 50.41,-106.77 16.2,-33.42 14.78,-30.5 -10.99,-3.55 5.92,-18.59 -3.11,-2.24 7.78,-12.4 5.68,-17.85 -9.99,-9.22 13.99,-3.33 9.46,-29.97 6.94,-1.56 2.39,-13.56 16.49,-16.45 7.29,-3.02 4.16,-12.39 6.9,-0.24 6.07,-7.3 17.29,-9.6 11.44,-1.09 6.12,-5.31 9.12,6.78 3,-10.82 22.95,-10.77 3.28,9.28 11.14,-2.81 11.23,7.7 3.45,14.54 7.46,-4 1.47,-19.53 21.52,-13.6 -0.96,-6.84 6.56,-9.41 9.39,2.31 2.92,-7.5 11.64,3.76 12.51,-1.27 -8.81,-8.15 7.1,-5.52 -0.61,-11.36 -10.2,-13.51 15.44,-11.13 9.62,0.4 -0.46,-8.95 5.63,-8.2 12.35,0.92 1.93,-5.53 23.27,-9.23 8.41,8.58 3.84,-12.95 9.94,6.93 19.3,1.98 4.65,4.44 6.92,-3.8 13.39,-15.13 12.4,9.2 2.65,3.34 16.01,-14.77 -0.77,-7.54 11.7,-3.65 1.29,-5.13 z"
+         id="path7377"
+         sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
+    </g>
+  </g>
+</svg>
