@@ -39,6 +39,9 @@
                                         <p class="text-slate-400">{{dog.breed}}</p>
                                     </div>
                                     <div class="flex-1 text-right text-slate-400">
+                                        {% if let Some(birth_date) = dog.birth_date %}
+                                            {{ self::fuzzy_time_delta(*(chrono::Utc::now().date_naive() - *birth_date)) }}
+                                        {% endif %}
                                         <!-- {if typeof birth_date === "string"}
                                             {(((new Date()).getTime() - (new Date(birth_date)).getTime()) / 1000 / 3600 / 24 / 365.25).toFixed(0)}
                                         {else}

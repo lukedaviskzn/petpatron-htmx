@@ -5,9 +5,11 @@ edition = "2021"
 
 [dependencies]
 axum = "0.7.7"
+chrono = "0.4.38"
 clap = { version = "4.5.20", features = ["derive", "env"] }
 dotenv = { version = "0.15.0", features = ["clap"] }
 env_logger = "0.11.5"
+libsql = "0.6.0"
 log = "0.4.22"
 rinja = { version = "0.3.5", features = ["with-axum", "serde_json"] }
 rinja_axum = "0.3.5"
